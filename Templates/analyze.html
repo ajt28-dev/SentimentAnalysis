@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis Results</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <div class="results-container">
+        <h1>Sentiment Analysis Results</h1>
+        
+        <div class="original-text">
+            <h2>Text Analyzed:</h2>
+            <p>{{ text }}</p>
+        </div>
+        
+        <div class="sentiment-result">
+            <h2>Sentiment:</h2>
+            <p class="emoji-display">{{ emoji }}</p>
+            <p>Score: {{ sentiment_score|round(2) }}</p>
+        </div>
+        
+        <div class="detailed-scores">
+            <h2>Detailed Scores:</h2>
+            <ul>
+                <li>Positive: {{ scores.pos|round(2) }}</li>
+                <li>Neutral: {{ scores.neu|round(2) }}</li>
+                <li>Negative: {{ scores.neg|round(2) }}</li>
+            </ul>
+        </div>
+        
+        <a href="/" class="analyze-again">Analyze Another Text</a>
+    </div>
+</body>
+</html>

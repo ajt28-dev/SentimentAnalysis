@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset= "UTF-8">
+    <title> {% block title %} Sentiment Emoji Analyzer{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+    <form method="POST" action="{{ url_for('analyze') }}">
+        <div class="form-group">
+            <label for="text-input">Enter text to analyze:</label>
+            <textarea id="text-input" name="text" rows="10" cols="50" placeholder="Type or paste text here for sentiment analysis..."></textarea>
+        </div>
+        <button type="submit" class="analyze-button">Analyze Sentiment</button>
+    </form>
+    
+</body>
+
+
+</html>
